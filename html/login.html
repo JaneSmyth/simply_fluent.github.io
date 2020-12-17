@@ -26,7 +26,7 @@
     <div id="main">
       <div id="createAccountDiv">
         <div id="createAccTitle">Create an Account</div>
-        <form name="signUpForm" action="../html/topic.html" method="post" id="signUpForm">
+        <form name="signUpForm" action="../html/topics.html" method="post" id="signUpForm">
           <input type="text" placeholder="Full name" id="signUpFullName" class="signUpLoginInput">
           <input type="email" placeholder="Email" id="signUpEmail" class="signUpLoginInput">
           <!-- password patter
@@ -41,7 +41,7 @@
       </div>
       <div id="signInDiv">
         <div id="signInTitle">Sign In</div>
-          <form name="loginForm" id="loginForm" action="../index.html" onsubmit="return validateLogin()" method="post">
+          <form name="loginForm" id="loginForm" action="../html/topics.html" onsubmit="return validateLogin()" method="post">
             <input type="email" name="loginEmail" placeholder="Email" id="loginEmail" class="signUpLoginInput" autofocus>
             <input type="password" name="loginPassword" placeholder="Password" id="loginPassword" class="signUpLoginInput"
               pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" title="8 or more characters. At least one number, one upper case, and one lower case character.">
