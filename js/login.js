@@ -24,11 +24,11 @@ $(document).ready(function(){
     var regexPattern = /^[a-zA-Z]+( [a-zA-Z]+)*$/;
       if(!regexPattern.test($fullName)){
         $("#signUpFullName").css("border","2px solid red");
-        fullNameValid=false;
+          fullNameValid=false;
       }
       else {
         $("#signUpFullName").css("border","none");
-        fullNameValid=true;
+          fullNameValid=true;
       }
   });
 });
@@ -42,7 +42,7 @@ function validateSignUp(){
   var fullName = document.getElementById("signUpFullName").value;
   var username = document.getElementById("signUpEmail").value;
   var password = document.getElementById("signUpPassword").value;
-  return validateUsernamePassword(username,password);
+  
 
   if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
     alert("Your name can contain alphabet characters and spaces only.");
