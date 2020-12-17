@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"></meta>
+    <title>Food</title>
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../ccs/index.css"> 
-    <title></title>
+    <link rel="stylesheet" href="../css/index.css">
+
   </head>
   <body>
     <div id="header">
-      <img src="logoA.png" alt="logo" id="../resources/logoA">
+      <a href="../index.html">
+      <img src="../resources/logo.png" alt="logo" id="logo">
+      </a>
       <div id="brandName">
         Simply Fluent
       </div>
@@ -18,25 +23,27 @@
       </div>
     </div>
     <div class="nav">
-      <a href="../html/index.html" class="navItem" id="firstNav">Home</a> 
+      <a href="../index.html" class="navItem" id="firstNav">Home</a>
       <a href="../html/topics.html" class="navItem" id="middleNavItem">Topics</a>
-      <a href="../html/login.html" class="navItem" id="loginSignupLink">Login / Signup</a> 
-		</div>
-		<p id="topicTitle"> Placeholder for Food Page<p>
-    <div class="topicsGrid">
-      <div id = "introductionTopic" class = "topics">
-        <a href="../html/learnType.html" class="topicLink">
-        <img src="../resources/logoA.png" alt="" class="topicImg"> 
-        Introduction</a>
+      <a href="../html/login.html" class="navItem" id="loginSignupLink">Login/ Signup</a>
+    </div>
+    <p id="learnTypeTitle" class="topicTypeTitle"> Placeholder for Animals Page<p>
+    <div class="topicsTypeGrid">
+      <div id = "quiz" class = "topicsTypesDiv">
+        <a href="#" class="topicTypeLink">
+        <img src="../resources/quiz.png" alt="" class="topicTypeImg">
+        Quiz</a>
       </div>
-      <div id = "foodDiv" class = "topics">
-        <a href="foodTemp.html" id="foodLink" class="topicLink">
-        <img src="../resources/logoA.png" alt="" class="topicImg"> 
+      <div id = "matchingGame" class = "topicsTypesDiv">
+        <a href="#" id="gameLink" class="topicTypeLink">
+        <img src="../resources/game.png" alt="" class="topicTypeImg">
+        Card Game</a>
       </div>
-      <div id ="animalsDiv" class = "topics">
-        <a href="animalsTemp.html" id="animalsLink" class="topicLink">
-        <img src="../resources/logoA.png" alt="" class="topicImg"> 
-        Animals</a>
-	</div>
-	</body>
+      <div id ="flashcards" class = "topicsTypesDiv">
+        <a href="#" id="flashcardsLink" class="topicTypeLink">
+        <img src="../resources/flash.png" alt="" class="topicTypeImg">
+        Flashcards</a>
+      </div>
+    </div>
+  </body>
 </html>
