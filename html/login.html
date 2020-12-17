@@ -36,7 +36,7 @@
           <input type="password" name="password" placeholder="New Password" id="signUpPassword" class="signUpLoginInput"
             pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" title="8 or more characters. At least one number, one upper case, and one lower case character.">
           <input type="password" name="confirmPass" placeholder="Confirm Password" id="signUpConfirmPass"class="signUpLoginInput">
-          <button type="submit" id="signUpSubmit" onclick="return validateUsernamePassword(this.id)">Create Account</button>
+          <button type="submit" id="signUpSubmit" onclick="return validateSignUp()">Create Account</button>
         </form>
       </div>
       <div id="signInDiv">
@@ -45,7 +45,7 @@
             <input type="email" name="loginEmail" placeholder="Email" id="loginEmail" class="signUpLoginInput" autofocus>
             <input type="password" name="loginPassword" placeholder="Password" id="loginPassword" class="signUpLoginInput"
               pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}" title="8 or more characters. At least one number, one upper case, and one lower case character.">
-            <button type="submit" id="loginSubmit" value="SignIn" onclick="return validateUsernamePassword(this.id)">Sign In</button>
+            <button type="submit" id="loginSubmit" value="SignIn" onclick="return validateLogin()">Sign In</button>
           </form>
       </div>
   </div>
