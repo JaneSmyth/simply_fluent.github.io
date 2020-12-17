@@ -87,27 +87,30 @@ function validateUsernamePassword(buttonClicked) {
     alert("Password must have 8 characters or more and contain at least one capital letter and at least one number.");
     return false;
   }
-  else if(buttonClicked = signUpSubmit){
-      username = document.getElementById("signUpEmail").value;
-      password = document.getElementById("signUpPassword").value;
+  else {
+      if(buttonClicked == "signUpSubmit"){
+        username = document.getElementById("signUpEmail").value;
+        password = document.getElementById("signUpPassword").value;
 
-      if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
-        alert("Your name can contain alphabet characters and spaces only.");
-        return false;
-      }
-      else if(!fullName){
-        alert("Please fill out all necessary fields.");
-        return false;
-      }
-      else if(confirmPassSame==false){ //pass and confirm pass not same
-        alert("Passwords do not match. Please try again.");
-        return false;
+        if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
+          alert("Your name can contain alphabet characters and spaces only.");
+          return false;
+        }
+        else if(!fullName){
+          alert("Please fill out all necessary fields.");
+          return false;
+        }
+        else if(!confirmPassSame){ //pass and confirm pass not same
+          alert("Passwords do not match. Please try again.");
+          return false;
+        }
+        else{
+          return true;
+        }
       }
       else{
         return true;
       }
   }
-  else{
-    return true;
-  }
+
 }
