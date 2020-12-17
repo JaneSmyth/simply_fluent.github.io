@@ -61,7 +61,7 @@ function validateSignUp(){
   else{
     creatAcIsValid =true;
   }
-  return validateUsernamePassword(username,password,creatAcIsValid)
+  validateUsernamePassword(username,password,creatAcIsValid)
 }
 function validateUsernamePassword(username,password,isValid) {
   var userLength = username.length;
