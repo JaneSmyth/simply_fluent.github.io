@@ -42,12 +42,12 @@ function validateSignUp(){
   var fullName = document.getElementById("signUpFullName").value;
   var username = document.getElementById("signUpEmail").value;
   var password = document.getElementById("signUpPassword").value;
-  
 
-  if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
+
+  if(fullNameValid===false){ //if user enters anything except letters (capital or lower) and spaces
     alert("Your name can contain alphabet characters and spaces only.");
   }
-  else if(fullName =""){
+  else if(fullName ==""){
     alert("Please fill out all necessary fields.");
     return false;
   }
