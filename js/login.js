@@ -33,36 +33,6 @@ $(document).ready(function(){
   });
 });
 
-function validateLogin(){
-  var username = document.getElementById("loginEmail").value;
-  var password = document.getElementById("loginPassword").value;
-  var isValidSoFar = true;
-  return validateUsernamePassword(username,password,isValidSoFar);
-}
-
-function validateSignUp(){
-  var fullName = document.getElementById("signUpFullName").value;
-  var username = document.getElementById("signUpEmail").value;
-  var password = document.getElementById("signUpPassword").value;
-  var createAcIsValid = true;
-
-  if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
-    alert("Your name can contain alphabet characters and spaces only.");
-    createAcIsValid=false;
-  }
-  else if(!fullName){
-    alert("Please fill out all necessary fields.");
-    createAcIsValid =false;
-  }
-  else if(confirmPassSame==false){ //pass and confirm pass not same
-    alert("Passwords do not match. Please try again.");
-    createAcIsValid =false;
-  }
-  else{
-    creatAcIsValid =true;
-  }
-  validateUsernamePassword(username,password,creatAcIsValid)
-}
 
 function validateUsernamePassword(buttonClicked) {
   var username = document.getElementById("loginEmail").value;
