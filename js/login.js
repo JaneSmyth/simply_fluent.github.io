@@ -36,51 +36,59 @@ $(document).ready(function(){
 function validateLogin(){
   var username = document.getElementById("loginEmail").value;
   var password = document.getElementById("loginPassword").value;
-  return validateUsernamePassword(username,password);
+  var isValidSoFar = true;
+  return validateUsernamePassword(username,password,isValidSoFar);
 }
+
 function validateSignUp(){
   var fullName = document.getElementById("signUpFullName").value;
   var username = document.getElementById("signUpEmail").value;
   var password = document.getElementById("signUpPassword").value;
-
+  var createAcIsValid = true;
 
   if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
     alert("Your name can contain alphabet characters and spaces only.");
-
+    createAcIsValid=false;
   }
   else if(!fullName){
     alert("Please fill out all necessary fields.");
-
+    createAcIsValid =false;
   }
   else if(confirmPassSame==false){ //pass and confirm pass not same
     alert("Passwords do not match. Please try again.");
+    createAcIsValid =false;
   }
   else{
-    return validateUsernamePassword(username,password);
+    creatAcIsValid =true;
   }
-  return false;
+  return validateUsernamePassword(username,password,creatAcIsValid)
 }
-function validateUsernamePassword(username,password) {
+function validateUsernamePassword(username,password,isValid) {
   var userLength = username.length;
   var passLength = password.length;
 
-  if(username == "" && password == ""){
-    alert("Please fill out all necessary fields.");
-    return false;
-  }
-  else if(userLength < 12 && passLength < 8){
-    alert("Username must be  12 characters or more. Password must be 8 characters or more.");
-    return false;
-  }
-  else if(username == "" || userLength < 12) {
-    alert("Your username email must have a minimum of 12 characters.");
-    return false;
-  }
-  else if(password = ""|| passLength < 8){
-    alert("Password must have 8 characters or more and contain at least one capital letter and at least one number.");
-    return false;
+  if(isValid){
+    if(username == "" && password == ""){
+      alert("Please fill out all necessary fields.");
+      return false;
+    }
+    else if(userLength < 12 && passLength < 8){
+      alert("Username must be  12 characters or more. Password must be 8 characters or more.");
+      return false;
+    }
+    else if(username == "" || userLength < 12) {
+      alert("Your username email must have a minimum of 12 characters.");
+      return false;
+    }
+    else if(password = ""|| passLength < 8){
+      alert("Password must have 8 characters or more and contain at least one capital letter and at least one number.");
+      return false;
+    }
+    else{
+      return true;
+    }
   }
   else{
-    return true;
+    return false;
   }
 }
