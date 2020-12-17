@@ -46,11 +46,11 @@ function validateSignUp(){
 
   if(!fullNameValid){ //if user enters anything except letters (capital or lower) and spaces
     alert("Your name can contain alphabet characters and spaces only.");
-    return false;
+
   }
   else if(!fullName){
     alert("Please fill out all necessary fields.");
-    return false;
+
   }
   else if(confirmPassSame==false){ //pass and confirm pass not same
     alert("Passwords do not match. Please try again.");
@@ -58,7 +58,7 @@ function validateSignUp(){
   else{
     return validateUsernamePassword(username,password);
   }
-  return true;
+  return false;
 }
 function validateUsernamePassword(username,password) {
   var userLength = username.length;
