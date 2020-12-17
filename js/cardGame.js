@@ -23,7 +23,6 @@ var englishSpanishWords =[        //
 ];
 
 window.onload=shuffleCardsAssignNew;
-//add close button!!!!!!!!============================
 window.addEventListener('click', function(clickEvent){
   if (document.getElementById('#popUpBox').contains(clickEvent.target)){
     alert("inside");
@@ -31,7 +30,6 @@ window.addEventListener('click', function(clickEvent){
     closePopUp();
   }
 });
-///////////////
 
 function shuffleCardsAssignNew(){
   /*spanish characters:
