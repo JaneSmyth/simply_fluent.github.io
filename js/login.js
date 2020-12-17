@@ -44,7 +44,7 @@ function validateSignUp(){
   var password = document.getElementById("signUpPassword").value;
 
 
-  if(fullNameValid===false){ //if user enters anything except letters (capital or lower) and spaces
+  if(fullNameValid==false){ //if user enters anything except letters (capital or lower) and spaces
     alert("Your name can contain alphabet characters and spaces only.");
     return false;
   }
@@ -52,13 +52,12 @@ function validateSignUp(){
     alert("Please fill out all necessary fields.");
     return false;
   }
-  else if(confirmPassSame===false){ //pass and confirm pass not same
+  else if(confirmPassSame==false){ //pass and confirm pass not same
     alert("Passwords do not match. Please try again.");
   }
   else{
     return validateUsernamePassword(username,password);
   }
-
 
 }
 function validateUsernamePassword(username,password) {
